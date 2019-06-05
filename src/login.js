@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Image,Alert, AppRegistry, Button, StyleSheet, View,ScrollView, TextInput } from 'react-native';
+import { Image,Alert, AppRegistry, Button, StyleSheet, View,ScrollView, TextInput, AsyncStorage } from 'react-native';
+//import { AsyncResource } from 'async_hooks';
 
 export default class LoginScreen extends Component {
     static navigationOptions = {
@@ -17,16 +18,21 @@ export default class LoginScreen extends Component {
     };
     
   }
-  validate = (email,pass) => {
+  validate = async(email,pass) => {
     const reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
          if (reg.test(email) === true && pass.length>8){
-            this.props.navigation.push('Home');
+           
+                await AsyncStorage.setItem('userToken', '12345678900')
+                this.props.navigation.navigate('App')
+            
          }
          else{
              Alert.alert("Invalid E-mail or Password");
          }
 
  }
+
+
   render() {
     let pic = {
       uri: 'https://firebase.google.com/downloads/brand-guidelines/PNG/logo-vertical.png'
