@@ -31,12 +31,13 @@ export default class Home extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor : '#4588f0',
+    backgroundColor : '#45f8f0',
     flex: 1,
     padding : 20,
     justifyContent: 'space-between',
   },
   text :{
+    color : '#000',
       paddingTop : 30,
       fontSize: 40,
   }

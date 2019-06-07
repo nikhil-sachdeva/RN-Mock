@@ -1,11 +1,11 @@
 import React from 'react';
-import {createSwitchNavigator, createStackNavigator} from 'react-navigation'
+import {createSwitchNavigator, createStackNavigator, createDrawerNavigator} from 'react-navigation'
 import AppNavigator from './routes/Navigator';
 import SignInScreen from './src/login'
 import AuthLoadingScreen from './src/AuthLoadingScreen'
 import HomeScreen from './src/home'
-
-
+import Settings from './src/settings';
+import AppDrawerNavigator from './routes/DrawerNavigator'
 
 // const AuthStackNavigator = createStackNavigator ({
 //   SignIn : SignInScreen,

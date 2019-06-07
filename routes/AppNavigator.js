@@ -1,13 +1,12 @@
-import { createBottomTabNavigator, createAppContainer } from 'react-navigation';
+import { createBottomTabNavigator, createAppContainer } from 'react-navigation'
 
-import HomeScreen from '../src/home'
-import Profile from '../src/profile'
-import Settings from '../src/settings';
+import HomeScreen from '../src/home';
+import Profile from '../src/profile';
+
 
 const AppNavigator = createBottomTabNavigator({
-    Home : HomeScreen,
-    Profile : Profile,
-    Settings : Settings
+    HomeScreeen : HomeScreen,
+    Profile : Profile
 })
 
 const App = createAppContainer(AppNavigator);
